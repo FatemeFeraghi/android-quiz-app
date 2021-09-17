@@ -1,9 +1,9 @@
 package com.example.mathquizz.model;
 
-public class QuestionBrain {
+public class QuestionAnalyzer {
     //This method will return boolean
     //answer is the answer given by the user
-    public boolean isCorrestAnswer(Question question, double answer){
+    public boolean isCorrectAnswer(Question question, double answer){
         return question.getCorrectAnswer() == answer;
     }
 }

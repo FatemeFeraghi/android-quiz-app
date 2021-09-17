@@ -18,5 +18,6 @@ public class Question {
     public double getCorrectAnswer(){return correctAnswer;}
     public double getWrongAnswer(){return wrongAnswer;}
 
+//    public void setText(String text){ this.text = text;}
 
 }
