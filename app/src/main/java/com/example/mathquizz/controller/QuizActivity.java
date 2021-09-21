@@ -28,6 +28,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button answerButton1;
     private Button answerButton2;
 
+    //A reference to the bundle object
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,11 @@ public class QuizActivity extends AppCompatActivity {
 
             String message;
             try {
+                //NumberFormat is an Java abstract class for all the numbers
                 NumberFormat format = NumberFormat.getInstance(locale);
+                //Number is a java abstract super class that represents values
+                //that are automatically convertible to formats below:
+                //double,int,short,long,float
                 Number number = format.parse(answer);
 
                 assert number != null;
@@ -92,6 +97,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     //This method is a reference to the Bundle object that pass into the onCreate method
+    //In order to avoid crashing the app if there is no data
     @Override
     protected void onSaveInstanceState (@NonNull Bundle outState){
         super.onSaveInstanceState(outState);
